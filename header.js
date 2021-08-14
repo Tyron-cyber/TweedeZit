@@ -49,51 +49,51 @@ function setup() {
             drawBox(cube);
             boxes.push(cube);
         }
-       
+
 
         // console.log(drawBox);
         // console.log(cube);
 
     }
-    
+
 }
 
 function update() {
-    context.fillStyle = "black";
-    context.fillText("No Signal", width / 2, height / 2);
+
     drawBox();
-    
-    // Utils.fillCircle(width / 2, 140, 90);
+    NoSignal();
+
     // context.fillStyle = "white";
-
-   
-
-    
-   
-    // context.fillStyle = "white";
-    // context.fillRect(frameCount, frameCount, width, height);
-
-
-
-
+    // context.fillRect(frameCount, frameCount, width, height)
+    // frameCount++;
+    requestAnimationFrame(update);
 }
 
 function drawBox(cube) {
-    
+
     setInterval(() => {
         let x = cube.x;
         let y = cube.y;
         let size = cube.size;
         let colors = cube.color;
         // console.log(cube);
-    
+
         context.fillStyle = Utils.hsl(colors, 90, 50);
         context.fillRect(x, y, size, size);
-        context.fill();  }, 0.5);
+        context.fill();
+    }, 0.5);
 
 
 }
 
+function NoSignal() {
+    // context.fillStyle = "black";
+    // Utils.fillCircle(width / 2, 140, 90);
+
+    context.fillStyle = "white";
+    context.fillText("No Signal", width / 2, height / 2);
+
+}
 
 
 /**
