@@ -78,10 +78,34 @@ function drawBox(cube) {
         let colors = cube.color;
         // console.log(cube);
 
-        context.fillStyle = Utils.hsl(colors, 90, 50);
+        context.fillStyle = Utils.hsl(colors, 70, 50);
         context.fillRect(x, y, size, size);
         context.fill();
     }, 0.5);
+
+    setInterval(() => {
+        let x = cube.x;
+        let y = cube.y;
+        let size = cube.size;
+        let colors = cube.color;
+        // console.log(cube);
+
+        context.fillStyle = Utils.hsl(colors, 90, 50);
+        context.fillRect(x, y, size, size);
+        context.fill();
+    }, 1000);
+
+    setInterval(() => {
+        let x = cube.x;
+        let y = cube.y;
+        let size = cube.size;
+        let colors = cube.color;
+        // console.log(cube);
+
+        context.fillStyle = Utils.hsl(colors, 90, 50);
+        context.fillRect(x, y, size, size);
+        context.fill();
+    }, 2000);
 
 
 }
@@ -90,9 +114,9 @@ function NoSignal() {
     // context.fillStyle = "black";
     // Utils.fillCircle(width / 2, 140, 90);
 
-    context.fillStyle = "white";
-    context.fillText("No Signal", width / 2, height / 2);
-
+        context.fillStyle = "white";
+        context.fillText("No Signal", width / 2 , height / 2);
+    
 }
 
 
